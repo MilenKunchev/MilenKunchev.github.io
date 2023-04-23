@@ -19,7 +19,7 @@ export const elements = [
     "id": 3,
     "name": "Some text for the title with 40 char max",
     "description": "Some text for the description with 120 char max.Some text for the description with 120 char max.Some text for the des...",
-    "image": "images/T-shirt.png",
+    "image": "images/image3-150x150.png",
     "linkUrl": "https://www.google.bg/",
     "imgAlt": "prohibition sign"
   },
