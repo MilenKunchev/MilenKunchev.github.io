@@ -1,0 +1,140 @@
+html {
+    background-color: #ffffff;
+
+    font-family: "Times New Roman", arial;
+    font-size: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.container {
+    display: grid;
+    grid-template-rows: max-content;
+    margin: 0.8rem;
+    background-color: #f1fafe;
+    border-radius: 1rem 1rem 0 0;
+
+
+}
+
+header {    
+    background-color: #457b9d;
+    padding: 0 0 0.3vw 0;
+
+    text-shadow: 2px 1px #000000;
+    color: #f1fafe;
+
+    border-radius: 1rem 1rem 0 0;
+}
+
+.buyText{
+    display: inline;
+    text-transform: none;
+}
+
+.card {
+    margin: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 22%;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 6px 0px;
+    box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2), inset 0 -5px 4px -1px rgba(0, 0, 0, 0.1), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 253, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+
+    font-size: 1vw;
+}
+
+.card:hover {
+    box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2), inset 0 -5px 4px -1px rgba(0, 0, 0, 0.1), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 253, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+
+}
+
+h3 {
+    margin: 0 10px;
+}
+h1{
+    margin: 0;
+}
+
+p {
+    text-transform: none;
+    margin: 10px;
+}
+
+.details {
+    height: 9vw;
+    width: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 0 0 20px 0;
+    border-radius: 2em;
+
+    background-color: #457b9d;
+
+    color: #fff;
+    text-shadow: 2px 1px #000000;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+  .button:hover {
+    background-color: #D22027;
+  }
+  
+
+
+footer {
+    background-color: #457b9d;
+
+    text-shadow: 2px 1px #000000;
+    color: #f1fafe;
+
+    border-radius: 0 0 1rem 1rem;
+}
+
+
+@media screen and (max-width: 980px) {
+    .card {
+        width: 40%;
+        display: inline-block;
+
+        box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2), inset 0 -5px 4px -1px rgba(0, 0, 0, 0.1), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 253, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+
+        font-size: 2.5vw;
+    }
+
+    .details {
+        height: 28vw;
+        width: auto;
+    }
+
+    button {
+        display: block;
+        margin: 0.2em auto;
+        height: 6vw;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .card {
+        width: 80%;
+        display: inline-block;
+
+        box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2), inset 0 -5px 4px -1px rgba(0, 0, 0, 0.1), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 253, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+
+        font-size: 3vw;
+    }
+
+    button {
+        display: block;
+        margin: 0.2em auto;
+        height: 11vw;
+        width: auto;
+    }
+}
