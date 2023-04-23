@@ -18,7 +18,7 @@ export const elements = [
   },
   {
     "id": 3,
-    "name": "Age Restriction Stickers. All ages",
+    "name": "Age Restriction Stickers - All ages",
     "description": "Self-adhesive high-quality stickers. Prohibition of presence for individuals under eighteen, twenty-one... Age.Interesting designs.",
     "image": "images/restriction-minimum-age-minor-underage.png",
     "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3483845&iaCode=all-departments&sortOrder=relevant",
@@ -35,7 +35,7 @@ export const elements = [
   {
     "id": 5,
     "name": "Funny and unconventional prohibition signs with animals",
-    "description": "Unconventional red prohibition signs with various animals. Snake, pig, unicorn, seahorse, kangaroo, etc.",
+    "description": "Unconventional red prohibition signs with various animals. Snake, pig, unicorn, seahorse, kangaroo...",
     "image": "images/funny-and-unconventional-prohibition-signs-with-animals.png",
     "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3484058&iaCode=all-departments&sortOrder=relevant",
     "imgAlt": "funny sticker sign forbidden animals and pets"
@@ -48,5 +48,6 @@ export const elements = [
     "linkUrl": "https://www.google.bg/",
     "imgAlt": "prohibition sign"
   },
+  
 
 ];
