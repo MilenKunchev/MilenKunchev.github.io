@@ -6,6 +6,7 @@ export const elements = [
     "image": "images/Cat-Prohibited-Stickers.png",
     "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=2902977&iaCode=all-departments&sortOrder=relevant",
     "imgAlt": "anti-cat-pets-stickers"
+
   },
   {
     "id": 2,
@@ -33,11 +34,11 @@ export const elements = [
   },
   {
     "id": 5,
-    "name": "Some text for the title with 40 char max",
-    "description": "Some text for the description with 120 char max.Some text for the description with 120 char max.Some text for the des...",
-    "image": "images/image1-150x150.png",
-    "linkUrl": "https://www.google.bg/",
-    "imgAlt": "prohibition sign"
+    "name": "Funny and unconventional prohibition signs with animals",
+    "description": "Unconventional red prohibition signs with various animals. Snake, pig, unicorn, seahorse, kangaroo, etc.",
+    "image": "images/funny-and-unconventional-prohibition-signs-with-animals.png",
+    "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3484058&iaCode=all-departments&sortOrder=relevant",
+    "imgAlt": "funny sticker sign forbidden animals and pets"
   },
   {
     "id": 6,
