@@ -13,7 +13,7 @@ export const elements = [
     "description": "Marijuana use comes with real risks that can impact a person's health and life. Anti Drug stickers collection.",
     "image": "images/Stop-Marijuana-Stickers.png",
     "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3480948&iaCode=all-departments&sortOrder=relevant",
-    "imgAlt": "anti-marijuana-drugs-stickers"
+    "imgAlt": "anti marijuana drugs stickers"
   },
   {
     "id": 3,
@@ -25,11 +25,11 @@ export const elements = [
   },
   {
     "id": 4,
-    "name": "Some text for the title with 40 char max",
-    "description": "Some text for the description with 120 char max.Some text for the description with 120 char max.Some text for the des...",
-    "image": "images/image2-150x150.png",
-    "linkUrl": "https://www.google.bg/",
-    "imgAlt": "prohibition sign"
+    "name": "Prohibition signs for extraterrestrial intruders - No Aliens",
+    "description": "Red warning signs for unwelcome extraterrestrial intruders. Prohibited for aliens.",
+    "image": "images/prohibition-signs-for-extraterrestrial-intruders-no-aliens.png",
+    "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3483961&iaCode=all-departments&sortOrder=relevant",
+    "imgAlt": "Sticker Prohibition alien intruders sign"
   },
   {
     "id": 5,
