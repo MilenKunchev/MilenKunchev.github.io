@@ -28,9 +28,10 @@ header {
     border-radius: 1rem 1rem 0 0;
 }
 
-.buyText{
+.subheading{
     display: inline;
-    text-transform: none;
+    text-transform: none;    
+    font-size:2vw;
 }
 
 .card {
@@ -119,6 +120,7 @@ footer {
         height: 6vw;
         width: auto;
     }
+    
 }
 
 @media screen and (max-width: 481px) {
@@ -136,5 +138,8 @@ footer {
         margin: 0.2em auto;
         height: 11vw;
         width: auto;
+    }
+    .subheading{  
+        font-size:2.5vw;
     }
 }
