@@ -40,14 +40,6 @@ export const elements = [
     "linkUrl": "https://www.redbubble.com/people/themikis/shop?artistUserName=TheMikis&collections=3484058&iaCode=all-departments&sortOrder=relevant",
     "imgAlt": "funny sticker sign forbidden animals and pets"
   },
-  {
-    "id": 6,
-    "name": "Some text for the title with 40 char max",
-    "description": "Some text for the description with 120 char max.Some text for the description with 120 char max.Some text for the des...",
-    "image": "images/image2-150x150.png",
-    "linkUrl": "https://www.google.bg/",
-    "imgAlt": "prohibition sign"
-  },
   
 
 ];
