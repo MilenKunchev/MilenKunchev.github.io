@@ -7,36 +7,46 @@ import { featuresElements } from "../data/text/featuresElements";
 
 const features = [
   featuresElements.feature1,
-  featuresElements.feature2,  
+  featuresElements.feature2,
   featuresElements.feature3,
   featuresElements.feature4,
   featuresElements.feature5,
   featuresElements.feature6,
- 
-  
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div class="mt-16 md:mt-0 text-center lg:text-left">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     {featuresText.title}
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
+
+  <p class="text-lg mt-4 text-slate-600 max-w-2xl mx-auto lg:mx-0">
     {featuresText.subtitle}
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-12 lg:gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+      <div class="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-4">
+
+        <div class="bg-black rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0">
+          <Icon
+            class="text-white w-5 h-5"
+            name={item.icon}
+          />
         </div>
+
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg">
+            {item.title}
+          </h3>
+
+          <p class="text-slate-500 mt-2 leading-relaxed">
+            {item.description}
+          </p>
         </div>
+
       </div>
     ))
   }
