@@ -26,7 +26,8 @@ jobs:
         uses: withastro/action@v3
         # Ако ползвате pnpm или yarn вместо npm, променете долния ред, но за npm е перфектно:
         # with:
-        #   path: . # Коренна папка на проекта
+        path: 
+        pnpm_version: 10
 
   deploy:
     environment:
