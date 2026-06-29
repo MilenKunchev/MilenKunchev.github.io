@@ -1,0 +1,83 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import PricingCard from "@/components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Фирма до 30 счетоводни документа",
+    price: "100 € / месец",
+    popular: false,
+    features: [
+      "Банкови сметки - 1",
+      "Работни заплати до 3",
+      "Отчети в Търговския регистър",
+      "Декларации към НАП и НОИ, отчет",
+      "Годишно Приключване",
+      
+    ],
+    button: {
+      text: "Заяви среща",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Фирма до 100 счетоводни документа",
+    price: {
+      monthly: "150 € / месец",
+      annual: "140 €",
+      discount: "10%",
+      original: "135 €",
+    },
+    popular: true,
+    features: [
+      "Банкови сметки до 3",
+      "Работни заплати до 10",
+      "Публикуване на отчета в Търговския регистър",
+      "Декларации към НАП и НОИ, отчети към НСИ",
+      "Годишно Приключване",
+    ],
+    button: {
+      text: "Заяви среща",
+      link: "/contact",
+    },
+
+    
+  },
+  {
+    name: "Фирма над 100 счетоводни документа",
+    price: "Договаряне",
+    popular: false,
+    features: [
+      "Банкови сметки над 3",
+      "Работни заплати над 10",
+      "Публикуване на отчета в Търговския регистър",
+      "Декларации към НАП и НОИ, отчети към НСИ",
+      "Годишно Приключване",
+    ],
+    button: {
+      text: "Заяви среща",
+      link: "/contact",
+    },
+  },
+
+  
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Цени за счетоводни услуги</Fragment>
+      <Fragment slot="desc">
+        Конкурентни цени за качествено обслужване
+      </Fragment>
+    </Sectionhead>
+
+    <div
+      class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>
