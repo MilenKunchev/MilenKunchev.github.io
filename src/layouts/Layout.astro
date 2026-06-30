@@ -7,61 +7,91 @@ import "@fontsource-variable/bricolage-grotesque";
 import "../styles/global.css";
 
 export interface Props {
-  title: string;
+  title?: string;
+  description?: string;
 }
+
+const siteName = "Optima Finance Счетоводство";
+const defaultDescription =
+  "Optima Finance – Професионално счетоводно обслужване на фирми. Предлагаме цялостни счетоводни услуги,\
+   ТРЗ, ДДС, данъчни консултации и финансови анализи за бизнеса. Оптимизирайте разходите си с индивидуален\
+    подход, лоялност и сигурност. Доверете се на вашия надежден партньор в бизнеса!";
+
+const { title, description } = Astro.props;
+
+const pageTitle = title
+  ? `${title} | ${siteName}`
+  : `${siteName} - Регистрация на фирми`;
+
+const pageDescription = description || defaultDescription;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
-
-const { title } = Astro.props;
-
-const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+const ogImage = new URL("/opengraph.jpg", Astro.site).toString();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Основни SEO тагове -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+
+    <!-- Open Graph (Facebook, LinkedIn, Viber и др.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Превю изображение на Astroship сайта" />
+    <meta property="og:locale" content="bg_BG" />
+
+    <!-- Twitter / X cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:site" content="@web3templates" />
+
+    <!-- Astro SEO компонент (по желание, но вече не е задължителен) -->
     <SEO
-      title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      title={pageTitle}
+      description={pageDescription}
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
-          url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
+          title: pageTitle,
+          url: canonicalURL,
+          image: ogImage,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Превю изображение на сайта",
         },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@web3templates",
       }}
     />
   </head>
+
   <body>
     <Navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
+
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
       }
