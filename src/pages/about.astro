@@ -14,24 +14,19 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Вашият личен счетоводител</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <div
+      class={`mt-12 mx-auto max-w-4xl gap-10 ${
+        publishedTeamMembers.length === 1
+          ? "flex justify-center"
+          : "grid grid-cols-1 md:grid-cols-3"
+      }`}>
       {
         publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
+          <div class="group max-w-sm w-full">
             <div class="w-full aspect-square">
               <Picture
                 src={teamMemberEntry.data.avatar.src}
@@ -39,7 +34,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 sizes="(max-width: 800px) 100vw, 400px"
                 width={400}
                 height={400}
-                class="w-full rounded-sm transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+                class="w-full aspect-square rounded-sm bg-white object-cover object-center transition group-hover:-translate-y-1 group-hover:shadow-xl"
               />
             </div>
 
@@ -52,6 +47,18 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
           </div>
         ))
       }
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800 text-center">
+        Пълна финансова сигурност за Вашата компания.
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500 text-center">
+        Когато работите с мен, Вие комуникирате директно с човека, който взема
+        решенията. Съчетавам над 10 години стаж, експертност в законодателството
+        и отговорност към Вашите финанси. Като управител и единствен експерт във
+        фирмата, гарантирам пълна конфиденциалност, прецизност и индивидуален
+        подход към Вашата дейност.
+      </p>
     </div>
   </Container>
 </Layout>
