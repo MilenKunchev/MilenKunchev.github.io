@@ -5,7 +5,7 @@ export const heroText = {
     subtitle: "Повече време за бизнеса. По-малко грижи за документите.",
 
     // buttons Text
-    primaryButton: "Безплатна консултация",
+    primaryButton: "0878 281 630",
     secondaryButton: "Услуги",
 
 }
