@@ -5,7 +5,8 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const normalize = (path: string) =>
   path !== "/" && path.endsWith("/") ? path.slice(0, -1) : path;
-const currentPath = Astro.url.pathname;
+
+const currentPath = normalize(Astro.url.pathname);
 
 const menuitems = [
   {
@@ -66,10 +67,10 @@ const menuitems = [
             menuitems.map((item) => (
               <li>
                 <a
-                  href={item.path}
+                  href={item.path}                  
                   class:list={[
                     "flex lg:px-3 py-2 items-center font-bold hover:text-gray-900",
-                    currentPath === normalize(item.path) ? "text-[#DA9204]" : "text-gray-600",
+                    currentPath === item.path ? "text-[#DA9204]" : "text-gray-600",
                   ]}
                 >
                   <span>{item.title}</span>

@@ -33,6 +33,11 @@ const ogImage = new URL("/opengraph.jpg", Astro.site).toString();
 <!doctype html>
 <html lang="bg">
   <head>
+
+    <!-- Да се премахне при хостване на сайта на неговия домейн -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- Да се премахне при хостване на сайта на неговия домейн -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
@@ -51,7 +56,10 @@ const ogImage = new URL("/opengraph.jpg", Astro.site).toString();
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content="Превю изображение на Astroship сайта" />
+    <meta
+      property="og:image:alt"
+      content="Превю изображение на Astroship сайта"
+    />
     <meta property="og:locale" content="bg_BG" />
 
     <!-- Twitter / X cards -->
@@ -86,6 +94,7 @@ const ogImage = new URL("/opengraph.jpg", Astro.site).toString();
 
   <body class="bg-gray-50">
     <Navbar />
+    <p style="color: red; text-align: center;">Please remove the 'No robot' line and this line from the layout once final hosting is done. It is currently under construction!!!</p>
     <main>
       <slot />
     </main>
