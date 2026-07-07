@@ -3,6 +3,7 @@ import Container from "@/components/container.astro";
 import Link from "@/components/ui/link.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
+const currentPath = Astro.url.pathname;
 const menuitems = [
   {
     title: "Начало",
@@ -63,7 +64,11 @@ const menuitems = [
               <li>
                 <a
                   href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  class:list={[
+                    "flex lg:px-3 py-2 items-center font-bold hover:text-gray-900",
+                    currentPath === item.path ? "text-[#DA9204]" : "text-gray-600",
+                  ]}
+                >
                   <span>{item.title}</span>
                 </a>
               </li>
