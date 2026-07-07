@@ -3,7 +3,7 @@ interface Props {
   href: string;
   size?: "md" | "lg";
   block?: boolean;
-  style?: "outline" | "primary" | "inverted" | "muted";
+  style?: "outline" | "primary" | "inverted" | "muted" | "optima";
   class?: string;
   [x: string]: any;
 }
@@ -23,10 +23,24 @@ const sizes = {
 };
 
 const styles = {
-  outline: "bg-white border-2 border-black hover:bg-gray-100 text-black ",
-  primary: "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
-  inverted: "bg-white text-black   border-2 border-transparent",
-  muted: "bg-gray-100 hover:bg-gray-200   border-2 border-transparent",
+  outline:
+    "bg-white border-2 border-black hover:bg-gray-100 text-black",
+
+  primary:
+    "bg-[#006aa0] text-white border-2 border-transparent hover:bg-[#cd8a13] transition-colors duration-300",
+
+  inverted:
+    "bg-white text-black border-2 border-transparent",
+
+  muted:
+    "bg-gray-100 hover:bg-gray-200 border-2 border-transparent",
+
+  // ======================================================
+  // Фирмени палитри
+  // ======================================================
+
+  optima:
+    "bg-[#006aa0] text-white border-2 border-transparent hover:bg-[#cd8a13] transition-colors duration-300",
 };
 ---
 
@@ -40,5 +54,6 @@ const styles = {
     styles[style],
     className,
   ]}
-  ><slot />
+>
+  <slot />
 </a>

@@ -8,13 +8,9 @@ import { heroText } from "../data/text/heroText";
 ---
 
 <main
-  
-  class="grid lg:grid-cols-2 items-center gap-10 pt-12 pb-10 md:pt-16 md:pb-24 bg-white rounded-lg shadow-sm ">
-
+  class="grid lg:grid-cols-2 items-center gap-10 pt-12 pb-10 md:pt-16 md:pb-24 bg-white rounded-lg shadow-sm">
   <!-- Hero Image -->
-  <div
-    class="order-1 lg:order-2 flex justify-center">
-
+  <div class="order-1 lg:order-2 flex justify-center">
     <Picture
       src={heroImage}
       alt="Счетоводни услуги"
@@ -24,40 +20,27 @@ import { heroText } from "../data/text/heroText";
       format="avif"
       class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl h-auto rounded-xl"
     />
-
   </div>
 
   <!-- Hero Text -->
-  <div
-    class="order-2 lg:order-1 max-w-xl mx-auto text-center lg:text-left">
-
+  <div class="order-2 lg:order-1 max-w-xl mx-auto text-center lg:text-left">
     <h1
       class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
-      
       {heroText.title}
-
     </h1>
 
-    <p
-      class="mt-5 text-lg text-slate-600">
-
+    <p class="mt-5 text-lg text-slate-600">
       {heroText.subtitle}
-
     </p>
 
     <div
       class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
-
       <Link
         href="tel:+359878281630"
         class="flex items-center justify-center gap-2">
-
-        <Icon
-          name="bx:bx-phone"
-          class="w-5 h-5 text-white" />
+        <Icon name="bx:bx-phone" class="w-5 h-5 text-white" />
 
         {heroText.primaryButton}
-
       </Link>
 
       <Link
@@ -65,17 +48,10 @@ import { heroText } from "../data/text/heroText";
         size="lg"
         style="outline"
         class="flex items-center justify-center gap-2">
-
-        <Icon
-          name="bx:calculator"
-          class="w-5 h-5 text-black" />
+        <Icon name="bx:calculator" class="w-5 h-5 text-black" />
 
         {heroText.secondaryButton}
-
       </Link>
-
     </div>
-
   </div>
-
 </main>

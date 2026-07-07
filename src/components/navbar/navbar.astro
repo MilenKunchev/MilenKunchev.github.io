@@ -25,7 +25,7 @@ const menuitems = [
     title: "Цени",
     path: "/pricing",
   },
-  
+
   {
     title: "Блог",
     path: "/blog",
@@ -36,55 +36,57 @@ const menuitems = [
   },
 ];
 ---
+
 <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center py-5">
-    <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <!-- Logo text and image-->
-        <a href="/" class="text-lg flex items-center gap-1">
-          <!--  SVG logo fixed size -->
-          <img
-            src="/logo.svg"
-            alt="Optima Finance Лого"
-            class="w-7 h-7 shrink-0"
-          />
+  <Container>
+    <header class="flex flex-col lg:flex-row justify-between items-center py-5">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <!-- Logo text and image-->
+          <a href="/" class="text-lg flex items-center gap-1">
+            <!--  SVG logo fixed size -->
+            <img
+              src="/logo.svg"
+              alt="Optima Finance Лого"
+              class="w-7 h-7 shrink-0"
+            />
 
-          <div>
-            <span class="font-bold text-slate-800">Optima</span>
-            <span class="text-brand-green font-bold">Finance</span>
+            <div>
+              <span class="text-slate-800 font-bold">Optima</span>
+              <span class="text-[#006AA0] font-bold">Finance</span>
+            </div>
+          </a>
+
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-gray-800" />
           </div>
-        </a>
-
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
+
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-3">
+            {
+              menuitems.map((item) => (
+                <li>
+                  <a
+                    href={item.path}
+                    class:list={[
+                      "flex lg:px-3 py-2 items-center font-bold hover:text-gray-900",
+                      currentPath === item.path
+                        ? "text-[#DA9204]"
+                        : "text-[gray-600]",
+                    ]}>
+                    <span>{item.title}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </MenuItems>
+      </Astronav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <Link href="/contact" size="md"> Консултация </Link>
       </div>
-
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
-          {
-            menuitems.map((item) => (
-              <li>
-                <a
-                  href={item.path}                  
-                  class:list={[
-                    "flex lg:px-3 py-2 items-center font-bold hover:text-gray-900",
-                    currentPath === item.path ? "text-[#DA9204]" : "text-gray-600",
-                  ]}
-                >
-                  <span>{item.title}</span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </MenuItems>
-    </Astronav>
-
-    <div class="hidden lg:flex items-center gap-4">
-      <Link href="/contact" size="md"> Консултация </Link>
-    </div>
-  </header>
-</Container>
+    </header>
+  </Container>
 </div>
