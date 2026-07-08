@@ -37,7 +37,7 @@ const menuitems = [
 ];
 ---
 
-<div class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+<div class="sticky top-0 z-50 bg-background-overlay backdrop-blur-sm shadow-sm">
   <Container>
     <header class="flex flex-col lg:flex-row justify-between items-center py-5">
       <Astronav>
@@ -52,13 +52,13 @@ const menuitems = [
             />
 
             <div>
-              <span class="text-slate-800 font-bold">Optima</span>
-              <span class="text-[#cd8a13] font-bold">Finance</span>
+              <span class="text-neutral-800 font-bold">Optima</span>
+              <span class="text-accent font-bold">Finance</span>
             </div>
           </a>
 
           <div class="block lg:hidden">
-            <MenuIcon class="w-4 h-4 text-gray-800" />
+            <MenuIcon class="w-4 h-4 text-neutral-800" />
           </div>
         </div>
 
@@ -70,10 +70,10 @@ const menuitems = [
                   <a
                     href={item.path}
                     class:list={[
-                      "flex lg:px-3 py-2 items-center font-bold hover:text-gray-900",
+                      "flex lg:px-3 py-2 items-center font-bold hover:text-neutral-900",
                       currentPath === item.path
-                        ? "text-[#DA9204]"
-                        : "text-[gray-600]",
+                        ? "text-accent-active"
+                        : "text-neutral-600",
                     ]}>
                     <span>{item.title}</span>
                   </a>

@@ -18,10 +18,10 @@ import Button from "./ui/button.astro";
       type="text"
       placeholder="Full Name"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-neutral-800 rounded-md outline-hidden focus:ring-4 border-neutral-300 focus:border-neutral-600 ring-neutral-100"
       name="name"
     />
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback invalid-feedback text-error text-sm mt-1">
       Please provide your full name.
     </div>
   </div>
@@ -32,12 +32,12 @@ import Button from "./ui/button.astro";
       placeholder="Email Address"
       name="email"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-neutral-800 rounded-md outline-hidden focus:ring-4 border-neutral-300 focus:border-neutral-600 ring-neutral-100"
     />
-    <div class="empty-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback text-error text-sm mt-1">
       Please provide your email address.
     </div>
-    <div class="invalid-feedback text-red-400 text-sm mt-1">
+    <div class="invalid-feedback text-error text-sm mt-1">
       Please provide a valid email address.
     </div>
   </div>
@@ -46,9 +46,9 @@ import Button from "./ui/button.astro";
       name="message"
       required
       placeholder="Your Message"
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-neutral-800 rounded-md outline-hidden h-36 focus:ring-4 border-neutral-300 focus:border-neutral-600 ring-neutral-100"
     ></textarea>
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback invalid-feedback text-error text-sm mt-1">
       Please enter your message.
     </div>
   </div>
@@ -72,7 +72,7 @@ import Button from "./ui/button.astro";
 
   .is-invalid,
   .was-validated :invalid {
-    border-color: #dc3545;
+    border-color: var(--color-error);
   }
 </style>
 
@@ -104,11 +104,11 @@ import Button from "./ui/button.astro";
       .then(async (response) => {
         let json = await response.json();
         if (response.status == 200) {
-          result.classList.add("text-green-500");
+          result.classList.add("text-accent-green");
           result.innerHTML = json.message;
         } else {
           console.log(response);
-          result.classList.add("text-red-500");
+          result.classList.add("text-error");
           result.innerHTML = json.message;
         }
       })

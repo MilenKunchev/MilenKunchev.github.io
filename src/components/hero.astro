@@ -8,7 +8,7 @@ import { heroText } from "../data/text/heroText";
 ---
 
 <main
-  class="grid lg:grid-cols-2 items-center gap-10 pt-12 pb-10 md:pt-16 md:pb-24 bg-white rounded-lg shadow-sm">
+  class="grid lg:grid-cols-2 items-center gap-10 pt-12 pb-10 md:pt-16 md:pb-24 bg-background-surface rounded-lg shadow-sm">
   <!-- Hero Image -->
   <div class="order-1 lg:order-2 flex justify-center">
     <Picture
@@ -29,7 +29,7 @@ import { heroText } from "../data/text/heroText";
       {heroText.title}
     </h1>
 
-    <p class="mt-5 text-lg text-slate-600">
+    <p class="mt-5 text-lg text-neutral-600">
       {heroText.subtitle}
     </p>
 
@@ -48,7 +48,7 @@ import { heroText } from "../data/text/heroText";
         size="lg"
         style="outline"
         class="flex items-center justify-center gap-2">
-        <Icon name="bx:calculator" class="w-5 h-5 text-black" />
+        <Icon name="bx:calculator" class="w-5 h-5 text-neutral-900" />
 
         {heroText.secondaryButton}
       </Link>

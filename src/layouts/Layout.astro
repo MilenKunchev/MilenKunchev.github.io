@@ -4,6 +4,7 @@ import Footer from "@/components/footer.astro";
 import Navbar from "@/components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import "@fontsource-variable/bricolage-grotesque";
+import "../styles/colors.css";
 import "../styles/global.css";
 
 export interface Props {
@@ -92,9 +93,9 @@ const ogImage = new URL("/opengraph.jpg", Astro.site).toString();
     />
   </head>
 
-  <body class="bg-gray-50">
+  <body class="bg-background-page">
     <Navbar />
-    <p style="color: red; text-align: center;">Please remove the 'No robot' line and this line from the layout once final hosting is done. It is currently under construction!!!</p>
+    <p class="text-error text-center">Please remove the 'No robot' line and this line from the layout once final hosting is done. It is currently under construction!!!</p>
     <main>
       <slot />
     </main>

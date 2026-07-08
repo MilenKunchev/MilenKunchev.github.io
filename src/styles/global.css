@@ -1,3 +1,5 @@
+@config "../../tailwind.config.mjs";
+
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
@@ -7,10 +9,6 @@
     Bricolage Grotesque Variable, Inter Variable, Inter, ui-sans-serif,
     system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
-    
-  /* My elements */
-  --color-brand-green: #4E8C6A;
-  
 }
 
 /*
@@ -28,6 +26,6 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-neutral-200, currentColor);
   }
 }

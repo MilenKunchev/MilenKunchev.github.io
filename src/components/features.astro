@@ -20,7 +20,7 @@ const features = [
     {featuresText.title}
   </h2>
 
-  <p class="text-lg mt-4 text-slate-600 max-w-2xl mx-auto lg:center">
+  <p class="text-lg mt-4 text-neutral-600 max-w-2xl mx-auto lg:center">
     {featuresText.subtitle}
   </p>
 </div>
@@ -29,14 +29,14 @@ const features = [
   {
     features.map((item) => (
       <div class="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-4">
-        <div class="bg-black rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0">
+        <div class="bg-background-dark rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0">
           <Icon class="text-white w-5 h-5" name={item.icon} />
         </div>
 
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>
 
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <p class="text-neutral-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))

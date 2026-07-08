@@ -1,12 +1,9 @@
 export const colors = {
-
-    theme:{
-        primary:"#0E5BD8",
-        secondary:"#1D2939",
-        accent:"#17B26A",
-        button:"#d8840e",
-        buttonhover:"#d9cd1e",
-    },
-
-    
-}
+  theme: {
+    primary: "var(--color-primary)",
+    secondary: "var(--color-secondary)",
+    accent: "var(--color-accent)",
+    button: "var(--color-primary)",
+    buttonhover: "var(--color-primary-hover)",
+  },
+};

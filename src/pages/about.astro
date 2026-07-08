@@ -34,13 +34,13 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 sizes="(max-width: 800px) 100vw, 400px"
                 width={400}
                 height={400}
-                class="w-full aspect-square rounded-sm bg-white object-cover object-center transition group-hover:-translate-y-1 group-hover:shadow-xl rounded-xl"
+                class="w-full aspect-square rounded-sm bg-background-surface object-cover object-center transition group-hover:-translate-y-1 group-hover:shadow-xl rounded-xl"
               />
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
+              <h2 class="text-lg text-neutral-800">{teamMemberEntry.data.name}</h2>
+              <h3 class="text-sm text-neutral-500">
                 {teamMemberEntry.data.title}
               </h3>
             </div>
@@ -49,10 +49,10 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       }
     </div>
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800 text-center">
+      <h2 class="font-bold text-3xl text-neutral-800 text-center">
         Пълна финансова сигурност за Вашата компания.
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500 text-center">
+      <p class="text-lg leading-relaxed text-neutral-500 text-center">
         Когато работите с мен, Вие комуникирате директно с човека, който взема
         решенията. Съчетавам над 10 години стаж, експертност в законодателството
         и отговорност към Вашите финанси. Като управител и единствен експерт във

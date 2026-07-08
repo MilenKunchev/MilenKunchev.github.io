@@ -34,7 +34,7 @@ export const typography = {
   },
 
   caption: {
-    default: "text-sm text-gray-500",
+    default: "text-sm text-neutral-500",
   },
 
   link: {
