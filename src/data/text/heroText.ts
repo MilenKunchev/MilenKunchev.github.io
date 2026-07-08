@@ -5,7 +5,7 @@ export const heroText = {
     subtitle: "Повече време за бизнеса. По-малко грижи за документите.",
 
     // buttons Text
-    primaryButton: "Обадете се: 0878 281 630",
+    primaryButton: "Обадете се: 0878 000 000",
     secondaryButton: "Услуги",
 
 }
